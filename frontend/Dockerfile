@@ -1,8 +1,8 @@
 FROM node:lts-alpine as build-stage
 WORKDIR /app
-COPY package*.json ./
+COPY BasicVuetify/package*.json ./
 RUN npm install
-COPY . .
+COPY BasicVuetify/ .
 RUN npm run build
 
 FROM nginx:stable-alpine as production-stage
