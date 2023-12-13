@@ -9,7 +9,7 @@ readme = "README.md"
 python = ">=3.11,<3.12"
 django = "^5.0"
 django-ninja = "^1.1.0"
-pydantic = "^2.5.2"
+pydantic = {extras = ["email"], version = "^2.5.2"}
 
 [tool.poetry.group.dev.dependencies]
 aioresponses = "^0.7.6"
@@ -28,7 +28,7 @@ markers = [
 ]
 
 [tool.pyright]
-include = ["backend", "api"]
+include = ["backend", "users"]
 exclude = [
     "**/__pycache__",
 ]
