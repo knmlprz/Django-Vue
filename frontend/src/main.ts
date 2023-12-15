@@ -9,7 +9,6 @@ import { registerPlugins } from '@/plugins'
 
 // Cookies plugin
 
-import  VueCookies from 'vue-cookies'
 
 // Components
 import App from './App.vue'
@@ -19,7 +18,6 @@ import { createApp } from 'vue'
 
 
 const app = createApp(App)
-app.use(VueCookies)
 registerPlugins(app)
 
 app.mount('#app')
