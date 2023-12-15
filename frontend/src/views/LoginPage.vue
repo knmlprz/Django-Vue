@@ -31,10 +31,18 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { login } from '@/api/auth'
-
+import { useRouter } from 'vue-router';
+const router = useRouter();
 const email = ref<string>('');
 const password = ref<string>('');
-const handleLoginButtonClick = () => {
-    login(email.value, password.value)
+function handleLoginButtonClick(){
+    try{
+        login(email.value, password.value)
+    }
+    catch(error){
+        return;
+    }
+    router.push('/')
 }
+
 </script>
