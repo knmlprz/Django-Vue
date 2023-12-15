@@ -24,7 +24,7 @@
                             v-model="password_repeat"></v-text-field>
                         <v-btn
                             variant="tonal"
-                            @click="handleLoginButtonClick()">Zaloguj</v-btn>
+                            @click="handleRegisterButtonClick()">Zaloguj</v-btn>
                     </v-form>
                 </v-col>
             </v-card>
@@ -40,7 +40,7 @@ const router = useRouter();
 const email = ref<string>('');
 const password = ref<string>('');
 const password_repeat = ref<string>('');
-function handleLoginButtonClick(){
+function handleRegisterButtonClick(){
     try{
         register(email.value, password.value, password_repeat.value)
     }
