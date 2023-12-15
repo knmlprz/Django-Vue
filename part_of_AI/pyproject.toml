@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "sheepAI"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Kleczynski <danielkleczynski@gmial.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jupyterlab= "^4.1.0a4"
+torch = "^2.1.2"
+torchaudio="^2.1.2"
+lightning="^2.1.2"
+torchvision = "^0.16.2"
+tensorboardX = "^2.6.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
