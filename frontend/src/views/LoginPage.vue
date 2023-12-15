@@ -26,13 +26,12 @@
             </v-card>
         </v-responsive>
     </v-container>
-
 </template>
 
 <script setup lang="ts">
-import axios from 'axios';
 import { ref } from 'vue';
 import { login } from '@/api/auth'
+
 const email = ref<string>('');
 const password = ref<string>('');
 const handleLoginButtonClick = () => {
